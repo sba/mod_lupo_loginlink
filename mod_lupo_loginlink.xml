@@ -17,7 +17,6 @@
 	<files>
 		<filename module="mod_lupo_loginlink">mod_lupo_loginlink.php</filename>
         <filename>helper.php</filename>
-        <filename>CHANGELOG.md</filename>
 		<folder>tmpl</folder>
 	</files>
 	<languages>
