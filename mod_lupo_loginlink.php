@@ -14,28 +14,22 @@ new ModLupoLoginlinkHelper();
 
 $app = JFactory::getApplication();
 
-$jinput   = JFactory::getApplication()->input;
+$jinput       = JFactory::getApplication()->input;
 $clientLogout = $jinput->get('clientLogout', false);
 
-if($clientLogout!==false){
-	ModLupoLoginlinkHelper::clientLogout($params);
-
-	//$app = JFactory::getApplication();
-	//$link = JURI::current();
-	//$msg = 'Looged out!';
-	//$app->redirect($link, $msg, $msgType='message');
-	$app->redirect(JURI::current());
+if ($clientLogout !== false) {
+    ModLupoLoginlinkHelper::clientLogout($params);
+    $app->redirect(JURI::current());
 }
-
 
 
 $session = JFactory::getSession();
 $client  = $session->get('lupo_client');
 
-if ($client){
-	$client_logged_in = true;
+if ($client) {
+    $client_logged_in = true;
 } else {
-	$client_logged_in = false;
+    $client_logged_in = false;
 }
 
 $loginlink_url = $params->get('loginlink_url');
