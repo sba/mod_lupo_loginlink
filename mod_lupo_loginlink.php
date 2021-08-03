@@ -23,8 +23,10 @@ if ($clientLogout !== false) {
 }
 
 
-$session = JFactory::getSession();
-$client  = $session->get('lupo_client');
+$session          = JFactory::getSession();
+$client           = $session->get('lupo_client');
+$reservations     = $session->get('lupo_reservations');
+$nbr_reservations = !isset($reservations) ? 0 : count($reservations);
 
 if ($client) {
     $client_logged_in = true;
