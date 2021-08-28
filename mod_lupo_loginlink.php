@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 require_once(dirname(__FILE__) . '/helper.php');
 new ModLupoLoginlinkHelper();
 
-$app = JFactory::getApplication();
+$app = JFactory::getApplication('site');
 
 $jinput       = JFactory::getApplication()->input;
 $clientLogout = $jinput->get('clientLogout', false);
@@ -22,8 +22,7 @@ if ($clientLogout !== false) {
     $app->redirect(JURI::current());
 }
 
-
-$session          = JFactory::getSession();
+$session          = $app->getSession();
 $client           = $session->get('lupo_client');
 $reservations     = $session->get('lupo_reservations');
 $nbr_reservations = !isset($reservations) ? 0 : count($reservations);
