@@ -5,12 +5,12 @@
 	client="site">
 	<name>mod_lupo_loginlink</name>
 	<author>Stefan Bauer</author>
-	<creationDate>August 2021</creationDate>
+	<creationDate>September 2021</creationDate>
 	<copyright>Copyright (C) databauer / Stefan Bauer</copyright>
 	<license>License GNU General Public License version 2 or later</license>
 	<authorEmail>stefan@databauer.ch</authorEmail>
 	<authorUrl>https://www.ludothekprogramm.ch</authorUrl>
-	<version>3.53.0</version>
+	<version>3.55.0</version>
 	<description>MOD_LUPO_LOGINLINK_XML_DESCRIPTION</description>
 	<update />
 
@@ -33,6 +33,7 @@
 				<field
 					name="loginlink_url"
 					type="text"
+					default="sortiment/kundenlogin"
 					label="MOD_LUPO_LOGINLINK_LOGIN_URL" >
 				</field>
 			</fieldset>
