@@ -18,8 +18,8 @@ $jinput       = JFactory::getApplication()->input;
 $clientLogout = $jinput->get('clientLogout', false);
 
 if ($clientLogout !== false) {
-    ModLupoLoginlinkHelper::clientLogout($params);
-    $app->redirect(JURI::current());
+	ModLupoLoginlinkHelper::clientLogout($params);
+	$app->redirect(JURI::current());
 }
 
 $session          = $app->getSession();
@@ -28,9 +28,9 @@ $reservations     = $session->get('lupo_reservations');
 $nbr_reservations = !isset($reservations) ? 0 : count($reservations);
 
 if ($client) {
-    $client_logged_in = true;
+	$client_logged_in = true;
 } else {
-    $client_logged_in = false;
+	$client_logged_in = false;
 }
 
 $loginlink_url = $params->get('loginlink_url');

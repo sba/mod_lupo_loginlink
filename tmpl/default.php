@@ -10,8 +10,10 @@
 defined('_JEXEC') or die;
 
 $class_hidden   = $nbr_reservations === 0 ? 'uk-hidden' : '';
-$res            = '<i class="uk-icon-shopping-cart uk-align-right ' . $class_hidden . '" id="lupo_loginlink_reservations"> <span class="uk-badge uk-badge-notification">' . $nbr_reservations . '</span></i>';
-$login_linktext = '';
+$res            = '<i class="uk-icon-shopping-cart uk-align-right lupo_loginlink_reservations ' . $class_hidden . '" id="lupo_loginlink_reservations"> 
+                    <span class="uk-badge uk-badge-notification" id="lupo_loginlink_reservations_nbr">' . $nbr_reservations . '</span>
+                   </i>';
+$login_linktext = "<span  class=\"lupo_loginlink_reservations $class_hidden\">".JText::_('MOD_LUPO_LOGINLINK_CART').'</span>';
 
 $componentParams = JComponentHelper::getParams('com_lupo');
 if ($componentParams->get('detail_show_toy_res_hide_login', '0') == 0) {
